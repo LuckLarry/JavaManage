@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/apiWork/!svn/ver/1/manage/src/com/jspsmart/upload
+END
+SmartUpload.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/apiWork/!svn/ver/1/manage/src/com/jspsmart/upload/SmartUpload.java
+END
+File.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/apiWork/!svn/ver/1/manage/src/com/jspsmart/upload/File.java
+END
+Request.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/apiWork/!svn/ver/1/manage/src/com/jspsmart/upload/Request.java
+END
+Files.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/apiWork/!svn/ver/1/manage/src/com/jspsmart/upload/Files.java
+END
+SmartUploadException.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/apiWork/!svn/ver/1/manage/src/com/jspsmart/upload/SmartUploadException.java
+END

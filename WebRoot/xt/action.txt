@@ -1,0 +1,21 @@
+package com.pb.action${param_action_folder};
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.pb.action.BaseAction;
+import com.pb.ifc.TableUseIfc;
+
+@Controller
+@RequestMapping("${param_action_do}")
+public class ${param_action_name} extends BaseAction {
+	@Autowired
+	TableUseIfc ${param_server};
+
+	@Override
+	public TableUseIfc getTabelServer() {
+		return ${param_server};
+	}
+
+}

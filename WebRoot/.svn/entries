@@ -1,0 +1,75 @@
+8
+
+dir
+62
+https://2-109/svn/apiWork/manage/WebRoot
+https://2-109/svn/apiWork
+
+
+
+2016-04-27T02:04:48.995469Z
+62
+pb
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+198f0f81-727f-784d-90f3-042a3d36b3a7
+
+META-INF
+dir
+
+Template
+dir
+
+WEB-INF
+dir
+
+index.jsp
+file
+89
+
+
+delete
+2016-04-29T08:10:17.245000Z
+dbc865bba0353bc54df33749ca399a12
+2016-05-03T02:59:17.618009Z
+89
+pb
+
+
+
+
+
+index.jsp.r64
+index.jsp.r89
+index.jsp.mine
+
+js
+dir
+
+welcome.htm
+file
+90
+
+
+
+2016-05-03T03:02:38.805000Z
+c0d2e9e808430d2360adef79a194ba48
+2016-05-03T02:59:21.156211Z
+90
+pb
+
+xt
+dir
+

@@ -1,0 +1,30 @@
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.pb.ifc.ItemDao;
+import com.pb.service.ItemImpl;
+
+public class CreaTomcatConfig {
+	public static void main(String[] args) {
+        ItemDao iD=new ItemImpl();
+        String path="C:/Program Files/Apache Software Foundation/Tomcat 7.0/conf/Catalina/localhost";
+        boolean del= iD.delete(path);
+        if(del){
+           creatConfig(iD, path);
+        }
+	}
+
+	private static void creatConfig(ItemDao iD, String path) {
+		Map<String, String> xmlMap=new HashMap<String, String>();
+//         xmlMap.put("ROOT", "<Context path=\"/\" docBase=\"D:/pbdown/FangYuanV4/WebRoot\" reloadable=\"true\"/>");
+         xmlMap.put("manage", "<Context path=\"/manage\" docBase=\"E:/workpb/manage/WebRoot\" reloadable=\"false\"/>");
+         xmlMap.put("api", "<Context path=\"/api\" docBase=\"D:/pbdown/exc/WebRoot\" reloadable=\"false\"/>");
+//         xmlMap.put("mf", "<Context path=\"/mf\" docBase=\"D:/mobileOffice/WebRoot\" reloadable=\"false\"/>");
+//         xmlMap.put("manage", "<Context path=\"/manage\" docBase=\"E:/workpb/manage/WebRoot\" reloadable=\"false\"/>");
+//         xmlMap.put("manage", "<Context path=\"/manage\" docBase=\"E:/workpb/manage/WebRoot\" reloadable=\"false\"/>");
+	     for (String key:xmlMap.keySet()) {
+	    	 iD.createFile(path+"/"+key+".xml", xmlMap.get(key));
+	     }
+	}
+}

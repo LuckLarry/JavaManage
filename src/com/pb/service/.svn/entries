@@ -1,0 +1,70 @@
+8
+
+dir
+74
+https://2-109/svn/apiWork/manage/src/com/pb/service
+https://2-109/svn/apiWork
+
+
+
+2016-04-29T08:26:02.129680Z
+74
+pb
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+198f0f81-727f-784d-90f3-042a3d36b3a7
+
+BaseService.java
+file
+81
+
+
+
+2016-05-03T03:03:00.975000Z
+67a6003001dfdcec2cdd87fca82df110
+2016-05-03T02:58:38.950797Z
+81
+pb
+
+ItemImpl.java
+file
+
+
+
+
+2016-04-29T03:59:29.546000Z
+524a321dfab55eaca9efbb0fd3c04ccb
+2016-04-27T01:41:29.723436Z
+55
+pb
+
+TableUseAbs.java
+file
+95
+
+
+
+2016-05-04T02:30:24.954000Z
+b7f6491be8868e829cb7da8c648969e1
+2016-05-04T02:27:04.249130Z
+95
+pb
+
+user
+dir
+
+xt
+dir
+

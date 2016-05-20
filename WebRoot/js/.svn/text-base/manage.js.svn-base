@@ -1,0 +1,215 @@
+(function(window, undefined ){
+    var pb={ 
+    		manageUrl:"http://192.168.6.30:60/manage",
+    		DoUrl:function(do_url,param,ticketMap,fun){// 权限请求处理
+    			$.ajax({
+    				type: "post",
+    				contentType:"application/json",
+    	            headers: ticketMap,
+    				url: do_url,
+    				data: JSON.stringify(param),
+    				success: function(data){
+    					if(typeof(fun) == "function"){
+    							fun(data);
+    					}    						    	
+    				},error: function(data){
+    	   				alert("错误"+data.message);
+    				}
+    			});	
+    		},
+    		getColData:function(d,gridCols){
+      		  var colMap=gridCols;
+    		  var cols="";
+    		  for(var c_ in colMap){
+    		          cols+=colMap[c_]['name']+";";
+    		  }
+    		  var data=[];
+    		  var map={};
+    		  for(var i=0,len=d.length;i<len;i++){
+    		    map=d[i];
+    		    for(var key in map){
+    		    	if(cols.indexOf(key+";")==-1){
+    		    	  delete map[key];
+    		    	}
+    		    }
+    		    data.push(map);       		    
+    		  }
+    		  return data;
+    		},findMap:function(d,col,repMap){//(数据集合，集合列） 根据集合的列中的值重新分组集合
+    			var tM={};
+    			var key=null;
+    			for(var i=0,len=d.length;i<len;i++){
+    				if(repMap){
+    					for(var rKey in repMap){
+    						if(d[i][rKey]){
+    							d[i][rKey]=repMap[d[i][rKey]];
+    						}
+    					}
+    				}
+    				key=d[i][col];
+    				if(tM[key]==null){
+    					tM[key]=[];
+    				}
+    				tM[key].push(d[i]);
+    			}
+    			return tM;
+    		},findTreeMap:function(d,node,parentNode,repMap){//数节点格式（数据list，子节点名称，父节点名称,需要替换集合）
+    			var tM=this.findMap(d, parentNode,repMap);
+    			var treeMap={};
+    			var t_=null;
+    			var nodeV=null;
+    			treeMap=pr.findAndDel(tM,tM,node);
+    			return treeMap['tree'];
+    		},bulid:function(no,ticketMap){
+    			pb.DoUrl(pb.manageUrl+"/xt/pOpenTree.do?m=bulid&id="+no, {}, ticketMap, function(data){
+    				if(data.code==0){
+    					  $.ligerDialog.waitting('保存成功！');
+                          setTimeout(function ()
+                          {
+                              $.ligerDialog.closeWaitting();
+                          }, 1000);
+    				}
+    			});
+    		}
+    };
+    pb.grid={//表格处理
+		getDeleteWhere:function(data,tKey){
+			if(data){
+				if(typeof(data)=='object'&&data.length>0){
+					var delMap={};
+					var delData = [];    						
+					for(var i=0;i<data.length;i++){
+						delData.push(data[i][tKey]);
+					}
+					delMap[tKey]=delData;
+					return delMap;
+				}
+			}
+			return null;
+		},getData:function(tData,chr,pNode){//处理树节点数据	(list,'子节点字段','父节点tree值')		
+			for(var i in tData){
+				if(pNode&&pNode!=""){
+					tData[i].theNode=pNode;
+				}
+				if(tData[i][chr]){
+					var theNode=tData[i].theNode+"-"+tData[i].id; 
+					var chrList=pb.grid.getData(tData[i][chr], chr,theNode);
+					for(var j in chrList){
+						tData.push(this.hasCol(tData,chrList[j]));
+					}
+					delete tData[i][chr];
+				}
+			}
+			return tData;
+		},initRow:function(l){//初始数据
+			var fM={};
+			var m;
+			for(var i in l){
+				m=l[i];
+				fM[m['name']]=m['value'];
+			}
+			return fM;
+		},hasCol:function(l,m){
+			if(l.length>0){
+				for(var k in m){
+					if(typeof(l[0][k])=="undefined"){
+						delete m[k];
+					}
+				}
+			}
+			return m;
+		},pbCol:function(cols){
+			var c_="";
+			for(var m in cols){
+				if(cols[m]['name']){
+					c_+=cols[m]['name']+",";
+				}
+			}
+			if(c_!=""){
+				c_=c_.substring(0, c_.length-1);
+			}
+			return c_;
+		}
+	};
+    var pr={
+    		findAndDel:function(tM,t_Map,node){//查找子节点并删除当前下的对应节点
+    			var treeList=null;
+    			var t_=null;
+    			var nodeV=null;
+    			for(var the in t_Map){
+    				t_=t_Map[the];
+    				for(var vM in t_){
+    					nodeV=t_[vM][node];
+    					if(tM[nodeV]!=null){
+    						var nodeMap=[];
+    						nodeMap[nodeV]=tM[nodeV];
+    						delete tM[nodeV];
+    						if(t_Map[nodeV]!=null){
+    							delete t_Map[nodeV];
+    						}
+    						var tTree=this.findAndDel(tM, nodeMap, node);
+    						t_[vM]['children']=tTree['tree'];
+    						tM=tTree['tM'];
+    					}
+    				}
+    				if(treeList==null){
+    					treeList=t_;
+    				}else{
+    					treeList.push(t_);
+    				}
+    			}
+    			return {'tree':treeList,'tM':tM};
+    		}
+    };
+    pb.isArray=function(obj) {//是否array集合
+        return Object.prototype.toString.call(obj) === '[object Array]';   
+    };
+    pb.getQueryString=function(name)
+    {
+        var now_url = document.location.search.slice(1), q_array = now_url.split('&');
+        for (var i = 0; i < q_array.length; i++)
+        {
+            var v_array = q_array[i].split('=');
+            if (v_array[0] == name)
+            {
+                return v_array[1];
+            }
+        }
+        return false;
+    };
+    pb.clone=function(myObj){ //克隆程序
+    	  if(typeof(myObj) != 'object') return myObj;
+    	  if(myObj == null) return myObj;
+    	  var myNewObj=null;
+    	  if(pb.isArray(myObj)){
+    		  myNewObj=[]; 
+    	  }else{
+    		  myNewObj = new Object();
+    	  }
+    	  for(var i in myObj)
+    	    myNewObj[i] = pb.clone(myObj[i]);
+    	  
+    	  return myNewObj;
+    };
+    pb.edit={
+    		checkEdit:function(gManager,item,field,is_edit){
+    	   		var checked="";
+                if(item[field]){
+                  checked="checked";
+                }
+                var editClick="false;";
+                if(is_edit){
+                	editClick=gManager+'.updateCell(\''+field+'\',this.checked,'+item.__index+');';
+                }
+               return '<input  type="checkbox" onclick="return '+editClick+'"  value="'+item[field]+'" '+checked+' />';
+       		},
+       		textArea:function(gManager,item,field,param){
+       		  var editClick="return false;";
+       		  if(param.edit){
+              	editV=gManager+'.updateCell(\''+field+'\',this.value,'+item.__index+');';
+              }
+       		  return '<textarea cols="'+param.cols+'" rows="'+param.rows+'" onchang="'+editV+'" >'+item[field]+'</textarea>';
+       		}
+    };
+	window.pb = window.$pb = pb;
+})( window );

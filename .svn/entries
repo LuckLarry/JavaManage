@@ -1,0 +1,76 @@
+8
+
+dir
+62
+https://2-109/svn/apiWork/manage
+https://2-109/svn/apiWork
+
+
+
+2016-04-27T02:04:48.995469Z
+62
+pb
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+198f0f81-727f-784d-90f3-042a3d36b3a7
+
+.classpath
+file
+
+
+
+
+2016-04-29T03:58:49.161000Z
+dcd5e552c2a0cd799fbe58414e0c0647
+2016-04-13T02:05:42.297553Z
+1
+pb
+
+.myeclipse
+dir
+
+.mymetadata
+file
+
+
+
+
+2016-04-29T03:59:29.436000Z
+3d368213f6ad9a2f65624cf1b42dd355
+2016-04-13T02:05:42.297553Z
+1
+pb
+
+.project
+file
+
+
+
+
+2016-04-29T03:59:29.446000Z
+fbc9fef0497812f89d5b38d2fa0d8f81
+2016-04-13T02:05:42.297553Z
+1
+pb
+
+.settings
+dir
+
+WebRoot
+dir
+
+src
+dir
+

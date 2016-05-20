@@ -1,0 +1,59 @@
+package com.pb.action;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.enumall.Message;
+import com.pb.ifc.TableUseIfc;
+import com.pb.xml.MessageXml;
+@Controller
+@RequestMapping("/xt/man.do")
+public class ManAllAction extends BaseAction {
+	@Autowired
+	TableUseIfc manAll_Ser;
+	
+	@Override
+	public TableUseIfc getTabelServer() {
+		return manAll_Ser;
+	}
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping(params = { "m=sqlAll" })
+	public @ResponseBody
+	Map<String, Object> doSqlAll(@RequestBody Map<String, Object> map) {
+		Map<String, Object> mapRe = Message.SUCCESS.getObjMess();
+		String temId=null;
+		if(map.containsKey(MessageXml.pb_UrlId)){
+			temId=map.get(MessageXml.pb_UrlId).toString();
+		}
+		try {
+			int num=0;
+            for(String key:map.keySet()){
+            	if("add_data".equals(key)){
+            		num +=this.addList((List)map.get(key));
+            	}else if("delete".equals(key)){
+            		Map<String, Object> deMap=(Map)map.get(key);
+            		if(deMap!=null&&deMap.size()>0){
+            			num += getTabelServer().delete(deMap);
+            		}
+            	}else if("up_data".equals(key)){
+            		num +=this.updataList((List)map.get(key),temId);
+            	}
+            }
+            if(num==0){
+            	mapRe = Message.UNTREATED.getObjMess();
+            }else{
+            	mapRe.put("doCount", num);
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+			mapRe = Message.UN_KNOW.getObjMess(e);
+		}
+		return mapRe;
+	}
+}

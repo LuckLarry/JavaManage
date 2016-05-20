@@ -1,0 +1,52 @@
+8
+
+dir
+62
+https://2-109/svn/apiWork/manage/src/spring
+https://2-109/svn/apiWork
+
+
+
+2016-04-14T03:11:58.470586Z
+6
+pb
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+198f0f81-727f-784d-90f3-042a3d36b3a7
+
+applicationContext.xml
+file
+
+
+
+
+2016-04-29T03:59:29.466000Z
+496efa0ba475c6057ffe6d46d8cb993d
+2016-04-14T03:11:58.470586Z
+6
+pb
+
+restful.xml
+file
+
+
+
+
+2016-04-29T03:59:29.466000Z
+745db03aa8637d2e7b97f3ae25480107
+2016-04-13T02:05:42.297553Z
+1
+pb
+

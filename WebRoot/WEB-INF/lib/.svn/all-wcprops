@@ -1,0 +1,383 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/apiWork/!svn/ver/52/manage/WebRoot/WEB-INF/lib
+END
+org.springframework.context-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.context-3.0.1.RELEASE.jar
+END
+com.springsource.org.apache.log4j-1.2.15.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/com.springsource.org.apache.log4j-1.2.15.jar
+END
+commons-httpclient-3.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/commons-httpclient-3.0.1.jar
+END
+slf4j-api-1.7.7.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/slf4j-api-1.7.7.jar
+END
+commons-codec-1.9.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/commons-codec-1.9.jar
+END
+item-helper-2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/apiWork/!svn/ver/52/manage/WebRoot/WEB-INF/lib/item-helper-2.jar
+END
+c3p0-0.9.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/c3p0-0.9.2.1.jar
+END
+commons-logging-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/commons-logging-1.2.jar
+END
+cglib-nodep-2.1_3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/cglib-nodep-2.1_3.jar
+END
+xstream-1.4.7.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/xstream-1.4.7.jar
+END
+cors-filter-2.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/cors-filter-2.4.jar
+END
+commons-logging-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/commons-logging-1.1.1.jar
+END
+aspectjweaver-1.5.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/aspectjweaver-1.5.3.jar
+END
+json.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/json.jar
+END
+org.springframework.web-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.web-3.0.1.RELEASE.jar
+END
+com.springsource.org.aopalliance-1.0.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/com.springsource.org.aopalliance-1.0.0.jar
+END
+httpmime-4.5.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/httpmime-4.5.1.jar
+END
+commons-io-2.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/commons-io-2.4.jar
+END
+org.springframework.jdbc-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.jdbc-3.0.1.RELEASE.jar
+END
+gson-2.2.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/gson-2.2.4.jar
+END
+ehcache-web-2.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/ehcache-web-2.0.4.jar
+END
+org.springframework.web.servlet-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.web.servlet-3.0.1.RELEASE.jar
+END
+commons-io-2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/commons-io-2.2.jar
+END
+com.springsource.org.apache.commons.logging-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/com.springsource.org.apache.commons.logging-1.1.1.jar
+END
+jackson-mapper-asl-1.9.13.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar
+END
+commons-codec-1.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/commons-codec-1.6.jar
+END
+httpclient-4.5.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/httpclient-4.5.1.jar
+END
+dom4j-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/dom4j-1.6.1.jar
+END
+org.springframework.aspects-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.aspects-3.0.1.RELEASE.jar
+END
+log4j-1.2.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/log4j-1.2.16.jar
+END
+slf4j-api-1.5.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/slf4j-api-1.5.11.jar
+END
+jackson-core-asl-1.9.13.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/jackson-core-asl-1.9.13.jar
+END
+emayclient.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/emayclient.jar
+END
+ezmorph-1.0.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/ezmorph-1.0.6.jar
+END
+java-property-utils-1.9.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/java-property-utils-1.9.jar
+END
+jna-4.1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/jna-4.1.0.jar
+END
+jaxen-1.1-beta-6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/jaxen-1.1-beta-6.jar
+END
+org.springframework.aop-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.aop-3.0.1.RELEASE.jar
+END
+httpcore-4.4.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/httpcore-4.4.3.jar
+END
+httpclient-cache-4.5.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/httpclient-cache-4.5.1.jar
+END
+org.springframework.expression-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.expression-3.0.1.RELEASE.jar
+END
+org.springframework.core-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.core-3.0.1.RELEASE.jar
+END
+jtds-1.2.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/jtds-1.2.5.jar
+END
+log4j-1.2.17.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/log4j-1.2.17.jar
+END
+commons-lang-2.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/commons-lang-2.5.jar
+END
+mchange-commons-java-0.2.3.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/mchange-commons-java-0.2.3.4.jar
+END
+commons-fileupload-1.3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/commons-fileupload-1.3.1.jar
+END
+org.springframework.transaction-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.transaction-3.0.1.RELEASE.jar
+END
+mysql-connector-java-5.1.36-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/mysql-connector-java-5.1.36-bin.jar
+END
+org.springframework.context.support-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.context.support-3.0.1.RELEASE.jar
+END
+fluent-hc-4.5.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/fluent-hc-4.5.1.jar
+END
+slf4j-log4j12-1.5.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/slf4j-log4j12-1.5.11.jar
+END
+org.springframework.asm-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.asm-3.0.1.RELEASE.jar
+END
+pb.helper.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/pb.helper.jar
+END
+jdom-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/jdom-1.0.jar
+END
+ehcache-2.10.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/ehcache-2.10.1.jar
+END
+jna-platform-4.1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/jna-platform-4.1.0.jar
+END
+bcprov-jdk16-1.45.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/bcprov-jdk16-1.45.jar
+END
+ueditor-1.1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/ueditor-1.1.2.jar
+END
+ehcache-core-2.6.9.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/ehcache-core-2.6.9.jar
+END
+org.springframework.beans-3.0.1.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/org.springframework.beans-3.0.1.RELEASE.jar
+END
+httpclient-win-4.5.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/httpclient-win-4.5.1.jar
+END
+jta-1.3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/apiWork/!svn/ver/1/manage/WebRoot/WEB-INF/lib/jta-1.3.1.jar
+END

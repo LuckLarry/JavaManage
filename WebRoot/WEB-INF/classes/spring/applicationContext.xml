@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+	http://www.springframework.org/schema/jee 
+	http://www.springframework.org/schema/jee/spring-jee-3.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+	default-lazy-init="true">
+
+	<context:component-scan base-package="com.pb" />
+
+	<context:annotation-config />
+   <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">  
+       	<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://192.168.6.30:3306/manage?zeroDateTimeBehavior=convertToNull" />
+		<property name="user" value="root" />
+		<property name="password" value="root123" />
+		<property name="initialPoolSize" value="10"/>
+		<property name="minPoolSize" value="10"/>
+		<property name="maxPoolSize" value="30"/>
+		<property name="acquireIncrement" value="5"/>
+		<property name="maxIdleTime" value="1800"/>
+		<property name="idleConnectionTestPeriod" value="1800"/>
+		<property name="maxStatements" value="0"/>
+  	</bean> 
+
+	<!-- 基本的JDBC操作类，在server层直接引用就可以使用 -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg name="dataSource">
+			<ref bean="dataSource" />
+		</constructor-arg>
+	</bean>
+	<!-- 基本的JDBC操作类，在server层直接引用就可以使用 -->
+	<bean id="SimpleJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
+		<constructor-arg name="dataSource">
+			<ref bean="dataSource" />
+		</constructor-arg>
+	</bean>
+	<!-- 提供用javaBean作为对象进行参数传递给jdbc使用，在server层直接引用就可以使用 -->
+	<bean id="simpleJdbcInsert" class="org.springframework.jdbc.core.simple.SimpleJdbcInsert">
+		<constructor-arg name="dataSource">
+			<ref bean="dataSource" />
+		</constructor-arg>
+	</bean>
+	<!-- 提供用命令参数进行参数传递给jdbc使用，在server层直接引用就可以使用 -->
+	<bean id="namedParameterJdbcTemplate"
+		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg name="dataSource">
+			<ref bean="dataSource" />
+		</constructor-arg>
+	</bean>
+	<!-- 提供调用存储过程功能给jdbc使用，在server层直接引用就可以使用 -->
+	<bean id="simpleJdbcCall" class="org.springframework.jdbc.core.simple.SimpleJdbcCall">
+		<constructor-arg name="dataSource">
+			<ref bean="dataSource" />
+		</constructor-arg>
+	</bean>
+	<!-- 事务管理 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<!-- 定义事务通知-->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="do*" propagation="REQUIRED" />
+			<tx:method name="*" propagation="SUPPORTS" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config>
+		<aop:pointcut id="bizMethods" expression="execution(* com.ekc.service..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods" />
+	</aop:config>
+
+</beans>

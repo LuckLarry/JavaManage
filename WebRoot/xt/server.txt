@@ -1,0 +1,25 @@
+package com.pb.service${param_server_folder};
+
+import org.springframework.stereotype.Service;
+
+import com.pb.service.TableUseAbs;
+import com.pb.xml.TName;
+
+@Service("${param_server}")
+public class ${param_server_name} extends TableUseAbs {
+
+	@Override
+	public String getTable() {
+		return TName.${param_table_name};
+	}
+
+	@Override
+	public String getPrimaryKey() {
+		return "${param_server_pk}";
+	}
+	
+	@Override
+	public String getFields() {
+		return "${param_table_fields}";
+	}
+}

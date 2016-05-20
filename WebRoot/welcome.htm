@@ -1,0 +1,41 @@
+﻿<html>
+<HEAD>
+<TITLE>登录</TITLE>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<style type="text/css">
+body{
+font-family: 幼圆;
+}
+#login{
+display: block;
+background-color: #ffffff;
+text-align: center;
+border: solid 1px;
+padding: 10px;
+z-index: 1;
+}
+#panel{
+background-color: #CCFFFF;
+padding: 10px;
+margin: 10px;
+}
+</style>
+</HEAD>
+<BODY>
+<div id="login" style="width: 280px;height: 150px;background-color: #EEE;">
+<form action="/user/userinfo.do?m=login">
+<span>登录</span>
+<div id="panel">
+<table>
+<tr>
+	<td>账 号：</td><td><input type="text" size="20" /></tr>
+<tr>
+	<td>密 码：</td><td><input type="password" size="20"></td>
+</tr>
+</table>
+</div>
+<input type="reset" value="重置" />&nbsp;<input type="button" value="登录" />
+</form>
+</div>
+</BODY>
+</html> 
